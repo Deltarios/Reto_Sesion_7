@@ -18,5 +18,6 @@ DataDB <- dbGetQuery(MyDataBase, "select * from CountryLanguage") #Carga la base
 
 data <- DataDB %>% filter(Language == "Spanish")
 
+# 5
 data %>% ggplot(aes( x = Percentage, y=CountryCode, fill = IsOfficial )) + 
   geom_bin2d()
